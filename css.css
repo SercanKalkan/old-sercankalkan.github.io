@@ -1,0 +1,165 @@
+html { background-color: #ff5555;}
+body {
+  font-family: Arial;
+  font-size: 14px;
+}
+.clear {
+    clear: both;
+}
+.container {
+  max-width: 1920px;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+header
+{
+  padding: 10px;
+  background: #ff5555 ;
+}
+a {
+  color: white;
+}
+header .logo
+{
+  width: 50px;
+  font-size: 30px;
+  margin: 0 auto;
+  float: left;
+  color: white;
+}
+header nav ul {
+  width: 300px;
+  margin: 0 auto;
+  float: right;
+}
+header nav ul li {
+  float: left;
+  padding: 10px;
+}
+header nav ul li a {
+  color: #000000; 
+}
+header nav ul li a:hover {
+  color: #f1f1f1;
+}
+#anadiv
+{
+    width: 100%;
+    height: 120px;
+    margin-top: 0px;
+    text-align: center;
+    background-color: blueviolet;
+}
+* {
+    box-sizing:border-box;
+  }
+  .other{
+    height: 700px;
+    background: url('img/gman.jpg') no-repeat center 50%;
+    background-size: cover;
+    position: relative;
+  }
+  .other li a {
+    color: #f1f1f1; 
+  }
+  .other li a:hover {
+    color: #ff5555;
+  }
+  .other p.text, .other p.small-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px #000000;
+  }
+  .other p.text {
+    font-size: 40px;
+    top: 10%;
+  }
+  .other p.small-text {
+    top: 30%;
+    font-size: 22px;
+  }
+  .slider
+  {
+    height: 400px;
+    background: url('img/back.jpg') no-repeat center 50%;
+    background-size: cover;
+    position: relative;
+  }
+  .slider p.text, .slider p.small-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px #000000;
+  }
+  .slider p.text {
+    font-size: 40px;
+    top: 10%;
+  }
+  .slider p.small-text {
+    top: 30%;
+    font-size: 22px;
+  }
+  .small-text {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px #000000;
+    top: 30%;
+    font-size: 22px;
+  }
+  .left {
+    background-color:#ff5555;
+    padding:20px;
+    float:left;
+    width:30%; 
+  }
+  
+  .main {
+    background-color:grey;
+    padding:20px;
+    float:left;
+    width:40%;
+  }
+  
+  .right {
+    background-color:#ff5555;
+    padding:20px;
+    float:left;
+    width:30%;
+  }
+  footer{
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    background: #ff5555;
+    font-size: 20px;
+  }
+  
+
+  @media screen and (max-width:800px) {
+    .left, .main, .right {
+      width:100%; 
+     } }
+     @media all and (max-width: 440px)
+     {
+       header .logo
+       {
+         float: none;
+         text-align: center;
+       }
+       .slider p.text
+       {
+         font-size: 30px;
+       }
+     }
