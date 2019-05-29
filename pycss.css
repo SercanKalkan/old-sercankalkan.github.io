@@ -1,4 +1,4 @@
-html { background-color: #ffffff;}
+  html { background-image:url(img/backk.jpg)}
 body {
   font-family: Arial;
   font-size: 14px;
@@ -15,7 +15,6 @@ body {
 header
 {
   padding: 10px;
-  background: #ff5555 ;
 }
 a {
   color: white;
@@ -29,7 +28,7 @@ header .logo
   color: white;
 }
 header nav ul {
-  width: 300px;
+  width: 350px;
   margin: 0 auto;
   float: right;
 }
@@ -38,10 +37,10 @@ header nav ul li {
   padding: 10px;
 }
 header nav ul li a {
-  color: #000000; 
+  color: #ffffff; 
 }
 header nav ul li a:hover {
-  color: #f1f1f1;
+  color: #ff5555;
 }
 #anadiv
 {
@@ -56,15 +55,16 @@ header nav ul li a:hover {
   }
   .other{
     height: 700px;
-    background: url('img/gman.jpg') no-repeat center 50%;
+    background: url('img/') no-repeat center 50%;
     background-size: cover;
     position: relative;
+    color : #ffffff;
   }
   .other li a {
     color: #f1f1f1; 
   }
   .other li a:hover {
-    color: #ff5555;
+    color: #3aff65;
   }
   .other p.text, .other p.small-text {
     position: absolute;
@@ -86,7 +86,7 @@ header nav ul li a:hover {
   .slider
   {
     height: 400px;
-    background: url('img/back.jpg') no-repeat center 50%;
+    background: url('img/logo.png') no-repeat center 50%;
     background-size: cover;
     position: relative;
   }
@@ -119,21 +119,25 @@ header nav ul li a:hover {
     font-size: 22px;
   }
   .left {
-    background-color:#ff5555;
+    color : #ffffff ;
+    background-color: ;
     padding:20px;
     float:left;
     width:30%; 
   }
   
   .main {
-    background-color:grey;
+    background-color:;
+    text-align: center;
+    color :#ffffff;
     padding:20px;
     float:left;
     width:40%;
   }
   
   .right {
-    background-color:#ff5555;
+    color: #ffffff;
+    background-color:;
     padding:20px;
     float:left;
     width:30%;
@@ -142,7 +146,7 @@ header nav ul li a:hover {
     text-align: center;
     padding: 10px;
     color: #ffffff;
-    background: #ff5555;
+    background: ;
     font-size: 20px;
   }
   
@@ -151,7 +155,7 @@ header nav ul li a:hover {
     .left, .main, .right {
       width:100%; 
      } }
-     @media all and (max-width: 440px)
+     @media all and (max-width: 480px)
      {
        header .logo
        {
