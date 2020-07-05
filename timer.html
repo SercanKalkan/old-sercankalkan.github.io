@@ -47,7 +47,15 @@
   background: #ff5555;
   color: white;
 }
+.countup span[class*="timeReff"] {
+  border-radius: 0 10px 10px 0;
+  margin-left: 0;
+  background:  purple;
+  color: white;
+}
 </style>
+<div style="text-align: center; color: #fff"><h2>Since that day</h2></div>
+
 <div class="countup" id="countup1">
   <span class="timeel years">00</span>
   <span class="timeel timeRefYears">years</span>
@@ -60,6 +68,7 @@
   <span class="timeel seconds">00</span>
   <span class="timeel timeRefSeconds">seconds</span>
 </div>
+
 <script type="text/javascript">
 	window.onload = function() {
   // Month Day, Year Hour:Minute:Second, id-of-element-container
@@ -92,11 +101,92 @@ function countUpFromTime(countFrom, id) {
   countUpFromTime.interval = setTimeout(function(){ countUpFromTime(countFrom, id); }, 1000);
 }
 </script>
+<script type="text/javascript">
+	    // The data/time we want to countdown to
+    var countDownDate = new Date("Dec 2, 2020 19:02:00").getTime();
+
+    // Run myfunc every second
+    var myfunc = setInterval(function() {
+
+    var now = new Date().getTime();
+    var timeleft = countDownDate - now;
+        
+    // Calculating the days, hours, minutes and seconds left
+    var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+        
+    // Result is output to the specific element
+    document.getElementById("days").innerHTML = days + " "
+    document.getElementById("hours").innerHTML = hours + " " 
+    document.getElementById("mins").innerHTML = minutes + " " 
+    document.getElementById("secs").innerHTML = seconds + " " 
+        
+    // Display the message when countdown is over
+    if (timeleft < 0) {
+        clearInterval(myfunc);
+        document.getElementById("days").innerHTML = ""
+        document.getElementById("hours").innerHTML = "" 
+        document.getElementById("mins").innerHTML = ""
+        document.getElementById("secs").innerHTML = ""
+        document.getElementById("end").innerHTML = "TIME UP!!";
+    }
+    }, 1000);
+</script>
+
+<div style="text-align: center; color: #fff"><h2>To one year</h2></div>
+
+<div class="countup" id="countup1">
+
+  <span class="timeel days" id="days"></span>
+<span class="timeel timeReffDays">days</span>
+    <span class="timeel hours" id="hours"></span>
+    <span class="timeel timeReffHours">hours</span> 
+    <span class="timeel minutes" id="mins"></span>
+    <span class="timeel timeReffMinutes">minutes</span>
+    <span class="timeel seconds" id="secs"></span>
+    <span class="timeel timeReffSeconds">seconds</span>
+
+    <h2 id="end"></h2>
+
+  </div>
+    <script>
+    // The data/time we want to countdown to
+    var countDownDate = new Date("Dec 2, 2020 19:09:00").getTime();
+
+    // Run myfunc every second
+    var myfunc = setInterval(function() {
+
+    var now = new Date().getTime();
+    var timeleft = countDownDate - now;
+        
+    // Calculating the days, hours, minutes and seconds left
+    var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+        
+    // Result is output to the specific element
+    document.getElementById("days").innerHTML = days + ""
+    document.getElementById("hours").innerHTML = hours + "" 
+    document.getElementById("mins").innerHTML = minutes + "" 
+    document.getElementById("secs").innerHTML = seconds + "" 
+        
+    // Display the message when countdown is over
+    if (timeleft < 0) {
+        clearInterval(myfunc);
+        document.getElementById("days").innerHTML = ""
+        document.getElementById("hours").innerHTML = "" 
+        document.getElementById("mins").innerHTML = ""
+        document.getElementById("secs").innerHTML = ""
+        document.getElementById("end").innerHTML = "Year has been passed !";
+    }
+    }, 1000);
+    </script>
 </div>
 </div>
-</nav>
-<div>
-	<div class="left">
+  <div class="left">
               <h2></h2>
 
             <p></p>
@@ -110,6 +200,9 @@ function countUpFromTime(countFrom, id) {
               <h2></h2>
             <p></p>
           </div>
+</nav>
+<div>
+	
 </div>
 <div>
 	
