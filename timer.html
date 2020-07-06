@@ -1,215 +1,216 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>
-            Mystique
-        </title>
-        <link href="normalize.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="pycss.css" type="text/css" />
-    </head>
-    <body>
-        <div class="container">
-<header>
-    <div class="logo">
-        <span><a href="index.html">Mystique</a></span>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="timer.html">SKY</a></li>
-            <li><a href="py.html">Minik Python Projeleri</a></li>
-            <li><a href="index.html">Playlistler</a></li>
-            <li><a href="kim.html">Ben Kimim ?</a></li>
-        </ul>
-        <div class="container"><p>.</p><p>.
-        </p>
-     <div class="container">
-	<style>
-.countup {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.countup .timeel {
-  display: inline-block;
-  padding: 10px;
-  background: #151515;
-  margin: 0;
-  color: white;
-  min-width: 2.6rem;
-  margin-left: 13px;
-  border-radius: 10px 0 0 10px;
-}
-.countup span[class*="timeRef"] {
-  border-radius: 0 10px 10px 0;
-  margin-left: 0;
-  background: #ff5555;
-  color: white;
-}
-.countup span[class*="timeReff"] {
-  border-radius: 0 10px 10px 0;
-  margin-left: 0;
-  background:  purple;
-  color: white;
-}
-</style>
-<div style="text-align: center; color: #fff"><h2>Since that day</h2></div>
+	<!DOCTYPE html>
+	<html>
+	    <head>
+	        <meta charset="UTF-8"> 
+	        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	        <title>
+	            Mystique
+	        </title>
+	        <link rel="icon" href="img/Logoo.png" type="image/x-icon"/>
+	        <link href="normalize.css" rel="stylesheet" type="text/css"/>
+	        <link rel="stylesheet" href="pycss.css" type="text/css" />
+	    </head>
+	    <body>
+	        <div class="container">
+	<header>
+	    <div class="logo">
+	        <span><a href="index.html">Mystique</a></span>
+	    </div>
+	    <nav>
+	        <ul>
+	            <li><a href="timer.html">SKY</a></li>
+	            <li><a href="py.html">Minik Python Projeleri</a></li>
+	            <li><a href="index.html">Playlistler</a></li>
+	            <li><a href="kim.html">Ben Kimim ?</a></li>
+	        </ul>
+	        <div class="container"><p>.</p><p>.
+	        </p>
+	     <div class="container">
+		<style>
+	.countup {
+	  text-align: center;
+	  margin-bottom: 20px;
+	}
+	.countup .timeel {
+	  display: inline-block;
+	  padding: 10px;
+	  background: #151515;
+	  margin: 0;
+	  color: white;
+	  min-width: 2.6rem;
+	  margin-left: 13px;
+	  border-radius: 10px 0 0 10px;
+	}
+	.countup span[class*="timeRef"] {
+	  border-radius: 0 10px 10px 0;
+	  margin-left: 0;
+	  background: #ff5555;
+	  color: white;
+	}
+	.countup span[class*="timeReff"] {
+	  border-radius: 0 10px 10px 0;
+	  margin-left: 0;
+	  background:  purple;
+	  color: white;
+	}
+	</style>
+	<div style="text-align: center; color: #fff"><h2>Since that day</h2></div>
 
-<div class="countup" id="countup1">
-  <span class="timeel years">00</span>
-  <span class="timeel timeRefYears">years</span>
-  <span class="timeel days">00</span>
-  <span class="timeel timeRefDays">days</span>
-  <span class="timeel hours">00</span>
-  <span class="timeel timeRefHours">hours</span>
-  <span class="timeel minutes">00</span>
-  <span class="timeel timeRefMinutes">minutes</span>
-  <span class="timeel seconds">00</span>
-  <span class="timeel timeRefSeconds">seconds</span>
-</div>
+	<div class="countup" id="countup1">
+	  <span class="timeel years">00</span>
+	  <span class="timeel timeRefYears">years</span>
+	  <span class="timeel days">00</span>
+	  <span class="timeel timeRefDays">days</span>
+	  <span class="timeel hours">00</span>
+	  <span class="timeel timeRefHours">hours</span>
+	  <span class="timeel minutes">00</span>
+	  <span class="timeel timeRefMinutes">minutes</span>
+	  <span class="timeel seconds">00</span>
+	  <span class="timeel timeRefSeconds">seconds</span>
+	</div>
 
-<script type="text/javascript">
-	window.onload = function() {
-  // Month Day, Year Hour:Minute:Second, id-of-element-container
-  countUpFromTime("Dec 2, 2019 19:09:00", 'countup1'); // ****** Change this line!
-};
-function countUpFromTime(countFrom, id) {
-  countFrom = new Date(countFrom).getTime();
-  var now = new Date(),
-      countFrom = new Date(countFrom),
-      timeDifference = (now - countFrom);
-    
-  var secondsInADay = 60 * 60 * 1000 * 24,
-      secondsInAHour = 60 * 60 * 1000;
-    
-  days = Math.floor(timeDifference / (secondsInADay) * 1);
-  years = Math.floor(days / 365);
-  if (years > 1){ days = days - (years * 365) }
-  hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
-  mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
-  secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
+	<script type="text/javascript">
+		window.onload = function() {
+	  // Month Day, Year Hour:Minute:Second, id-of-element-container
+	  countUpFromTime("Dec 2, 2019 19:09:00", 'countup1'); // ****** Change this line!
+	};
+	function countUpFromTime(countFrom, id) {
+	  countFrom = new Date(countFrom).getTime();
+	  var now = new Date(),
+	      countFrom = new Date(countFrom),
+	      timeDifference = (now - countFrom);
+	    
+	  var secondsInADay = 60 * 60 * 1000 * 24,
+	      secondsInAHour = 60 * 60 * 1000;
+	    
+	  days = Math.floor(timeDifference / (secondsInADay) * 1);
+	  years = Math.floor(days / 365);
+	  if (years > 1){ days = days - (years * 365) }
+	  hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
+	  mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
+	  secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
 
-  var idEl = document.getElementById(id);
-  idEl.getElementsByClassName('years')[0].innerHTML = years;
-  idEl.getElementsByClassName('days')[0].innerHTML = days;
-  idEl.getElementsByClassName('hours')[0].innerHTML = hours;
-  idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
-  idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
+	  var idEl = document.getElementById(id);
+	  idEl.getElementsByClassName('years')[0].innerHTML = years;
+	  idEl.getElementsByClassName('days')[0].innerHTML = days;
+	  idEl.getElementsByClassName('hours')[0].innerHTML = hours;
+	  idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
+	  idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
 
-  clearTimeout(countUpFromTime.interval);
-  countUpFromTime.interval = setTimeout(function(){ countUpFromTime(countFrom, id); }, 1000);
-}
-</script>
-<script type="text/javascript">
+	  clearTimeout(countUpFromTime.interval);
+	  countUpFromTime.interval = setTimeout(function(){ countUpFromTime(countFrom, id); }, 1000);
+	}
+	</script>
+	<script type="text/javascript">
+		    // The data/time we want to countdown to
+	    var countDownDate = new Date("Dec 2, 2020 19:02:00").getTime();
+
+	    // Run myfunc every second
+	    var myfunc = setInterval(function() {
+
+	    var now = new Date().getTime();
+	    var timeleft = countDownDate - now;
+	        
+	    // Calculating the days, hours, minutes and seconds left
+	    var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+	    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+	    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+	        
+	    // Result is output to the specific element
+	    document.getElementById("days").innerHTML = days + " "
+	    document.getElementById("hours").innerHTML = hours + " " 
+	    document.getElementById("mins").innerHTML = minutes + " " 
+	    document.getElementById("secs").innerHTML = seconds + " " 
+	        
+	    // Display the message when countdown is over
+	    if (timeleft < 0) {
+	        clearInterval(myfunc);
+	        document.getElementById("days").innerHTML = ""
+	        document.getElementById("hours").innerHTML = "" 
+	        document.getElementById("mins").innerHTML = ""
+	        document.getElementById("secs").innerHTML = ""
+	        document.getElementById("end").innerHTML = "TIME UP!!";
+	    }
+	    }, 1000);
+	</script>
+
+	<div style="text-align: center; color: #fff"><h2>To one year</h2></div>
+
+	<div class="countup" id="countup1">
+
+	  <span class="timeel days" id="days"></span>
+	<span class="timeel timeReffDays">days</span>
+	    <span class="timeel hours" id="hours"></span>
+	    <span class="timeel timeReffHours">hours</span> 
+	    <span class="timeel minutes" id="mins"></span>
+	    <span class="timeel timeReffMinutes">minutes</span>
+	    <span class="timeel seconds" id="secs"></span>
+	    <span class="timeel timeReffSeconds">seconds</span>
+
+	    <h2 id="end"></h2>
+
+	  </div>
+	    <script>
 	    // The data/time we want to countdown to
-    var countDownDate = new Date("Dec 2, 2020 19:02:00").getTime();
+	    var countDownDate = new Date("Dec 2, 2020 19:09:00").getTime();
 
-    // Run myfunc every second
-    var myfunc = setInterval(function() {
+	    // Run myfunc every second
+	    var myfunc = setInterval(function() {
 
-    var now = new Date().getTime();
-    var timeleft = countDownDate - now;
-        
-    // Calculating the days, hours, minutes and seconds left
-    var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-        
-    // Result is output to the specific element
-    document.getElementById("days").innerHTML = days + " "
-    document.getElementById("hours").innerHTML = hours + " " 
-    document.getElementById("mins").innerHTML = minutes + " " 
-    document.getElementById("secs").innerHTML = seconds + " " 
-        
-    // Display the message when countdown is over
-    if (timeleft < 0) {
-        clearInterval(myfunc);
-        document.getElementById("days").innerHTML = ""
-        document.getElementById("hours").innerHTML = "" 
-        document.getElementById("mins").innerHTML = ""
-        document.getElementById("secs").innerHTML = ""
-        document.getElementById("end").innerHTML = "TIME UP!!";
-    }
-    }, 1000);
-</script>
+	    var now = new Date().getTime();
+	    var timeleft = countDownDate - now;
+	        
+	    // Calculating the days, hours, minutes and seconds left
+	    var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+	    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+	    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+	        
+	    // Result is output to the specific element
+	    document.getElementById("days").innerHTML = days + ""
+	    document.getElementById("hours").innerHTML = hours + "" 
+	    document.getElementById("mins").innerHTML = minutes + "" 
+	    document.getElementById("secs").innerHTML = seconds + "" 
+	        
+	    // Display the message when countdown is over
+	    if (timeleft < 0) {
+	        clearInterval(myfunc);
+	        document.getElementById("days").innerHTML = ""
+	        document.getElementById("hours").innerHTML = "" 
+	        document.getElementById("mins").innerHTML = ""
+	        document.getElementById("secs").innerHTML = ""
+	        document.getElementById("end").innerHTML = "Year has been passed !";
+	    }
+	    }, 1000);
+	    </script>
+	</div>
+	</div>
+	  <div class="left">
+	              <h2></h2>
 
-<div style="text-align: center; color: #fff"><h2>To one year</h2></div>
-
-<div class="countup" id="countup1">
-
-  <span class="timeel days" id="days"></span>
-<span class="timeel timeReffDays">days</span>
-    <span class="timeel hours" id="hours"></span>
-    <span class="timeel timeReffHours">hours</span> 
-    <span class="timeel minutes" id="mins"></span>
-    <span class="timeel timeReffMinutes">minutes</span>
-    <span class="timeel seconds" id="secs"></span>
-    <span class="timeel timeReffSeconds">seconds</span>
-
-    <h2 id="end"></h2>
-
-  </div>
-    <script>
-    // The data/time we want to countdown to
-    var countDownDate = new Date("Dec 2, 2020 19:09:00").getTime();
-
-    // Run myfunc every second
-    var myfunc = setInterval(function() {
-
-    var now = new Date().getTime();
-    var timeleft = countDownDate - now;
-        
-    // Calculating the days, hours, minutes and seconds left
-    var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-        
-    // Result is output to the specific element
-    document.getElementById("days").innerHTML = days + ""
-    document.getElementById("hours").innerHTML = hours + "" 
-    document.getElementById("mins").innerHTML = minutes + "" 
-    document.getElementById("secs").innerHTML = seconds + "" 
-        
-    // Display the message when countdown is over
-    if (timeleft < 0) {
-        clearInterval(myfunc);
-        document.getElementById("days").innerHTML = ""
-        document.getElementById("hours").innerHTML = "" 
-        document.getElementById("mins").innerHTML = ""
-        document.getElementById("secs").innerHTML = ""
-        document.getElementById("end").innerHTML = "Year has been passed !";
-    }
-    }, 1000);
-    </script>
-</div>
-</div>
-  <div class="left">
-              <h2></h2>
-
-            <p></p>
-          </div>
-  <div class="main">
-              <h2>SKY's soul is with you*</h2>
-<iframe width="%100" height="380" src="https://www.youtube.com/embed/videoseries?list=PLXAWTOyZO8QSjln2vGrFSxoLE9w4QrEnw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p></p>
-          </div>
-            <div class="right">
-              <h2></h2>
-            <p></p>
-          </div>
-</nav>
-<div>
-	
-</div>
-<div>
-	
-</div>
-    <footer class="container">
-            <span>© Mystique 2018</span>
-        </footer>
-        </div>
-    </body>
-</html>
+	            <p></p>
+	          </div>
+	  <div class="main">
+	              <h2>SKY's soul is with you*</h2>
+	<iframe width="%100" height="380" src="https://www.youtube.com/embed/videoseries?list=PLXAWTOyZO8QSjln2vGrFSxoLE9w4QrEnw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	            <p></p>
+	          </div>
+	            <div class="right">
+	              <h2></h2>
+	            <p></p>
+	          </div>
+	</nav>
+	<div>
+		
+	</div>
+	<div>
+		
+	</div>
+	    <footer class="container">
+	            <span>© Mystique 2018</span>
+	        </footer>
+	        </div>
+	    </body>
+	</html>
